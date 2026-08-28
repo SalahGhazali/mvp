@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#b4233a">
+  <title>إنشاء حساب | قطرة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <section class="register-screen">
+    <header class="register-header"><a class="brand" href="index.html"><span class="brand-mark">ق</span><span>قطرة</span></a><p>لديك حساب بالفعل؟ <a class="link-btn" href="login.html">تسجيل الدخول</a></p></header>
+    <main class="register-layout">
+      <aside class="register-aside">
+        <a class="auth-back light-back" href="index.html">→ العودة للرئيسية</a>
+        <div><span class="eyebrow light">انضم إلى قطرة</span><h1 id="aside-title">معًا، نبني شبكة أمان لكل محتاج للدم.</h1><p id="aside-copy">اختر مسارك وأنشئ حسابك لتكون جزءًا من منظومة صحية أكثر سرعة وترابطًا.</p></div>
+        <ul class="register-benefits"><li><span>✓</span> بياناتك محمية وآمنة</li><li><span>✓</span> إشعارات فورية وذكية</li><li><span>✓</span> متابعة واضحة لكل العمليات</li></ul>
+      </aside>
+
+      <div class="register-content">
+        <div class="register-box register-box-wide">
+          <div id="register-progress" class="register-progress"></div>
+          <form id="register-form" novalidate>
+            <section class="register-step active" data-step="choose">
+              <span class="eyebrow">إنشاء حساب جديد</span><h2>اختر مسار التسجيل</h2><p class="muted">يوجد مساران منفصلان. اختر الحساب الذي يمثل استخدامك للمنصة.</p>
+              <div class="path-choices">
+                <button class="path-choice donor-path" type="button" data-choose-path="donor"><span class="path-icon">♡</span><div><strong>مسار المتبرع</strong><small>للأفراد الراغبين في التبرع واستقبال النداءات المتوافقة</small><ul><li>تحديد فصيلة الدم والتوفر</li><li>متابعة المواعيد والتبرعات</li></ul></div><b>ابدأ كمتبرع ←</b></button>
+                <button class="path-choice institution-path" type="button" data-choose-path="institution"><span class="path-icon blue-path">⌂</span><div><strong>مسار المؤسسات</strong><small>للمؤسسات الصحية ومراكز وبنوك الدم</small><ul><li>تحديد الخدمات المطلوبة</li><li>رفع وثائق الترخيص والاعتماد</li></ul></div><b>ابدأ كمؤسسة ←</b></button>
+              </div>
+              <p class="signup-line">لديك حساب بالفعل؟ <a class="link-btn" href="login.html">تسجيل الدخول</a></p>
+            </section>
+
+            <section class="register-step" data-step="donor-data">
+              <span class="eyebrow">مسار المتبرع</span><h2>تسجيل متبرع جديد</h2><p class="muted">أدخل بياناتك الأساسية حتى نرسل لك نداءات التبرع المناسبة.</p>
+              <div class="form-grid register-fields no-scroll">
+                <label class="field full">الاسم الكامل <span class="required">*</span><input name="donorName" type="text" placeholder="أدخل اسمك الكامل" minlength="3" required></label>
+                <label class="field">رقم الهوية <span class="required">*</span><input name="donorIdentity" type="text" inputmode="numeric" placeholder="9 أرقام على الأقل" minlength="9" required></label>
+                <label class="field">فصيلة الدم <span class="required">*</span><select name="donorBlood" required><option value="">اختر الفصيلة</option><option>A+</option><option>A−</option><option>B+</option><option>B−</option><option>AB+</option><option>AB−</option><option>O+</option><option>O−</option></select></label>
+                <label class="field">المحافظة <span class="required">*</span><select name="donorGovernorate" required><option value="">اختر المحافظة</option><option>رام الله والبيرة</option><option>القدس</option><option>نابلس</option><option>الخليل</option><option>جنين</option><option>غزة</option></select></label>
+                <label class="field">رقم الهاتف <span class="required">*</span><input name="donorPhone" type="tel" placeholder="+970 59 000 0000" pattern="[+0-9 -]{8,18}" required></label>
+                <label class="field full">البريد الإلكتروني <span class="required">*</span><input name="donorEmail" type="email" placeholder="name@example.com" required></label>
+                <label class="field">كلمة المرور <span class="required">*</span><input name="donorPassword" type="password" placeholder="8 محارف على الأقل" minlength="8" required></label>
+                <label class="field">تأكيد كلمة المرور <span class="required">*</span><input name="donorConfirm" type="password" placeholder="أعد كتابة كلمة المرور" minlength="8" required></label>
+                <label class="check terms-check"><input name="donorTerms" type="checkbox" required> أوافق على <a href="#">شروط الخدمة</a> و<a href="#">سياسة الخصوصية</a></label>
+              </div>
+              <div class="register-buttons"><button class="secondary-btn" type="button" data-back>السابق</button><button class="primary-btn" type="button" data-next="donor-verify">إنشاء حساب المتبرع</button></div>
+            </section>
+
+            <section class="register-step" data-step="institution-data">
+              <div class="flow-tag">الخطوة 1 من 2</div><span class="eyebrow">مسار المؤسسات</span><h2>إنشاء حساب مؤسسة صحية</h2><p class="muted">بيانات المؤسسة والممثل الرسمي كما تظهر في وثائق الترخيص.</p>
+              <h3 class="form-section-title"><span>⌂</span> بيانات المؤسسة</h3>
+              <div class="form-grid register-fields no-scroll">
+                <label class="field full">اسم المؤسسة <span class="required">*</span><input name="institutionName" type="text" placeholder="أدخل اسم المؤسسة الرسمي" minlength="3" maxlength="150" required></label>
+                <label class="field">نوع المؤسسة <span class="required">*</span><select name="institutionType" required><option value="">اختر نوع المؤسسة</option><option value="central_hospital">مستشفى مركزي</option><option value="field_hospital">مستشفى ميداني</option><option value="health_center">مركز صحي</option><option value="blood_bank_association">جمعية بنك دم</option><option value="independent_blood_center">مركز دم مستقل</option></select></label>
+                <label class="field">رقم الترخيص <span class="required">*</span><input name="licenseNumber" type="text" placeholder="أدخل رقم الترخيص" minlength="3" required></label>
+                <label class="field full">العنوان <span class="required">*</span><input name="institutionAddress" type="text" placeholder="أدخل عنوان المؤسسة" minlength="3" required></label>
+                <label class="field">المحافظة <span class="required">*</span><select name="institutionGovernorate" required><option value="">اختر المحافظة</option><option>شمال غزة</option><option>غزة</option><option>دير البلح</option><option>خان يونس</option><option>رفح</option><option>القدس</option><option>رام الله والبيرة</option><option>نابلس</option><option>الخليل</option></select></label>
+              </div>
+              <h3 class="form-section-title"><span>♙</span> بيانات الممثل الرسمي</h3>
+              <div class="form-grid register-fields no-scroll">
+                <label class="field full">الاسم الكامل <span class="required">*</span><input name="representativeName" type="text" placeholder="أدخل الاسم الكامل" minlength="3" required></label>
+                <label class="field">رقم الهاتف <span class="required">*</span><input name="institutionPhone" type="tel" placeholder="+970 59 000 0000" pattern="[+0-9 -]{8,18}" required></label>
+                <label class="field">البريد الإلكتروني <span class="required">*</span><input name="institutionEmail" type="email" placeholder="name@institution.org" required></label>
+                <label class="field">كلمة المرور <span class="required">*</span><input name="institutionPassword" type="password" placeholder="8 محارف على الأقل" minlength="8" required></label>
+                <label class="field">تأكيد كلمة المرور <span class="required">*</span><input name="institutionConfirm" type="password" placeholder="أعد كتابة كلمة المرور" minlength="8" required></label>
+              </div>
+              <div class="register-buttons"><button class="secondary-btn" type="button" data-back>السابق</button><button class="primary-btn" type="button" data-next="institution-services">التالي: الخدمات والوثائق</button></div>
+            </section>
+
+            <section class="register-step" data-step="institution-services">
+              <div class="flow-tag">الخطوة 2 من 2</div><span class="eyebrow">مسار المؤسسات</span><h2>الخدمات والوثائق المطلوبة</h2><p class="muted">حدد نطاق عمل المؤسسة وارفع الوثائق الرسمية المطلوبة لاستكمال الطلب.</p>
+              <h3 class="form-section-title"><span>⌁</span> نطاق الخدمات المطلوبة</h3>
+              <div class="scope-options">
+                <label><input type="radio" name="serviceScope" value="blood_request_only" required><span><strong>مؤسسة تطلب الدم فقط</strong><small>تطلب الدم من مستشفى لديه بنك دم أو من بنك الدم المركزي</small></span></label>
+                <label><input type="radio" name="serviceScope" value="hospital_blood_bank"><span><strong>مستشفى لديه بنك دم</strong><small>يستقبل المتبرعين ويدير مخزونه ويزوّد المؤسسات الطالبة</small></span></label>
+                <label><input type="radio" name="serviceScope" value="central_blood_bank"><span><strong>بنك الدم المركزي</strong><small>يستقبل المتبرعين ويزوّد المستشفيات بالدم عند الطلب</small></span></label>
+              </div>
+              <div id="service-details" class="service-details hidden"><h4>الخدمات التي ستتاح بعد الاعتماد</h4><div class="service-check-grid"></div></div>
+              <h3 class="form-section-title"><span>▣</span> رفع الوثائق الرسمية</h3>
+              <div class="documents-grid">
+                <label class="document-upload"><input type="file" name="licenseDocument" accept=".pdf,.jpg,.jpeg,.png" required><span>↑</span><div><strong>رخصة مزاولة العمل / الترخيص الصحي</strong><small>PDF أو صورة — بحد أقصى 5MB</small></div><b>اختيار ملف</b></label>
+                <label class="document-upload"><input type="file" name="authorizationDocument" accept=".pdf,.jpg,.jpeg,.png" required><span>↑</span><div><strong>خطاب تفويض ممثل المؤسسة</strong><small>وثيقة إجبارية</small></div><b>اختيار ملف</b></label>
+                <label class="document-upload"><input type="file" name="qualityDocument" accept=".pdf,.jpg,.jpeg,.png" required><span>↑</span><div><strong>شهادة الجودة أو الاعتماد</strong><small>وثيقة إجبارية</small></div><b>اختيار ملف</b></label>
+              </div>
+              <label class="check institution-terms"><input name="institutionTerms" type="checkbox" required> أوافق على شروط الخدمة وسياسة الخصوصية وأقر بصحة البيانات والوثائق.</label>
+              <div class="review-note"><span>i</span><p><strong>ماذا يحدث بعد الإرسال؟</strong><small>سيتم مراجعة الطلب والوثائق من قبل مشرف الجهة الصحية قبل تفعيل الخدمات.</small></p></div>
+              <div class="register-buttons"><button class="secondary-btn" type="button" data-back>العودة للبيانات</button><button class="primary-btn" type="button" data-next="institution-verify">إرسال طلب التسجيل</button></div>
+            </section>
+
+            <section class="register-step success-step" data-step="donor-verify">
+              <div class="success-mark">✓</div><span class="eyebrow">التحقق من الحساب</span><h2>تم إنشاء حسابك بنجاح</h2><p class="muted">أدخل رمز التحقق المكوّن من 4 أرقام والمرسل إلى بريدك الإلكتروني.</p>
+              <div class="otp-inputs" dir="ltr"><input maxlength="1" inputmode="numeric"><input maxlength="1" inputmode="numeric"><input maxlength="1" inputmode="numeric"><input maxlength="1" inputmode="numeric"></div>
+              <button class="primary-btn wide" type="button" data-verify>تأكيد وتفعيل الحساب</button><button class="link-btn resend-btn" type="button" data-resend>إعادة إرسال الرمز</button>
+            </section>
+
+            <section class="register-step success-step" data-step="institution-verify">
+              <div class="success-mark">✓</div><span class="eyebrow">تم إرسال طلب التسجيل</span><h2>وصل طلب مؤسستك إلى الجهة المشرفة</h2><p class="muted">أدخل رمز التحقق المرسل إلى البريد الإلكتروني. بعد التحقق ستتم مراجعة الترخيص والوثائق قبل تفعيل الحساب.</p>
+              <div class="otp-inputs" dir="ltr"><input maxlength="1" inputmode="numeric"><input maxlength="1" inputmode="numeric"><input maxlength="1" inputmode="numeric"><input maxlength="1" inputmode="numeric"></div>
+              <button class="primary-btn wide" type="button" data-verify>تأكيد البريد الإلكتروني</button><button class="link-btn resend-btn" type="button" data-resend>إعادة إرسال الرمز</button>
+            </section>
+          </form>
+        </div>
+      </div>
+    </main>
+  </section>
+  <script src="accounts.js"></script>
+  <script src="register.js"></script>
+</body>
+</html>
