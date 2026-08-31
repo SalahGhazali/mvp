@@ -56,3 +56,17 @@
 /* Voluntary blood donation requests */
 .voluntary-list{display:flex;flex-direction:column;gap:12px}.voluntary-item{display:flex;align-items:center;gap:14px;border:1px solid var(--line);border-radius:15px;padding:16px;background:#fff}.voluntary-blood{width:58px;height:58px;border-radius:18px;background:var(--primary-soft);color:var(--primary);display:grid;place-items:center;font-size:1.12rem;font-weight:800;flex:none}.voluntary-main{display:flex;flex-direction:column;gap:5px;flex:1;min-width:0}.voluntary-main p{margin:0;font-size:.8rem;font-weight:700}.voluntary-main>small{font-size:.68rem;color:var(--muted)}.voluntary-actions{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}.voluntary-actions button{padding:9px 12px;font-size:.72rem}.donation-center-options{display:flex;flex-direction:column;gap:8px;margin-bottom:16px;max-height:300px;overflow:auto}.section-subtitle{font-size:.88rem;margin:5px 0 14px}.section-subtitle:not(:first-child){margin-top:26px;padding-top:20px;border-top:1px solid var(--line)}
 @media(max-width:700px){.voluntary-item{align-items:flex-start;flex-wrap:wrap}.voluntary-main{min-width:calc(100% - 76px)}.voluntary-actions{width:100%}.voluntary-actions button{flex:1}}
+
+.login-box{width:min(560px,100%)}
+.demo-credentials{margin-top:12px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
+.demo-credentials-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;background:#fafafa;border-bottom:1px solid var(--line)}
+.demo-credentials-head strong{font-size:.82rem}.demo-credentials-head small{font-size:.68rem;color:var(--muted)}
+.demo-credentials-list{display:grid;grid-template-columns:1fr 1fr;max-height:260px;overflow:auto}
+.demo-credential-row{display:flex;align-items:center;gap:10px;padding:11px 12px;border-bottom:1px solid #f0f1f2}
+.demo-credential-row:nth-child(odd){border-left:1px solid #f0f1f2}
+.demo-credential-row:last-child{grid-column:1/-1}
+.demo-credential-row>div{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}
+.demo-credential-row strong{font-size:.72rem;color:var(--ink)}.demo-credential-row span,.demo-credential-row small{font-size:.65rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.demo-credential-row span{color:var(--muted)}.demo-credential-row small{color:var(--primary);font-weight:700}
+.demo-use-btn{border:0;background:var(--primary-soft);color:var(--primary);border-radius:8px;padding:7px 9px;font-size:.68rem;font-weight:800}
+.demo-use-btn:hover{background:var(--primary);color:#fff}
+@media(max-width:560px){.demo-credentials-list{grid-template-columns:1fr}.demo-credential-row:nth-child(odd){border-left:0}.demo-credential-row:last-child{grid-column:auto}.demo-credentials-head{align-items:flex-start;flex-direction:column}}

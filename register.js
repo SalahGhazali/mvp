@@ -266,7 +266,8 @@ document.querySelectorAll('[data-verify]').forEach(button => {
     QatraAccounts.setSession(created.account);
     localStorage.removeItem('qatraRegisterPath');
     showToast(profileToSave ? 'تم إرسال طلب المؤسسة إلى مشرف الصحة للمراجعة' : 'تم إنشاء الحساب وتسجيل الدخول بنجاح');
-    setTimeout(() => window.location.href = 'dashboard.html', 700);
+    const folder = {donor: 'donor', hospital: 'hospital', hospital_bloodbank: 'hospital-bloodbank', bloodbank: 'bloodbank'}[created.account.role] || 'donor';
+    setTimeout(() => window.location.href = `${folder}/dashboard.html`, 700);
   });
 });
 
