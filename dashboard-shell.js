@@ -17,7 +17,7 @@ document.querySelector('#dashboard-shell-root').outerHTML = `
         <div class="topbar-start"><button id="open-sidebar" class="icon-btn mobile-only" aria-label="فتح القائمة">☰</button><div><h1 id="page-title">لوحة التحكم</h1><p id="today-label"></p></div></div>
         <div class="top-actions"><div class="search"><span>⌕</span><input id="global-search" type="search" placeholder="ابحث في النظام..."><kbd>⌘ K</kbd></div><button class="icon-btn notify-btn" data-page="notifications" aria-label="الإشعارات">♢<b id="notify-count">0</b></button><button class="profile-button" id="profile-menu"><span class="avatar small">—</span><span><strong id="header-name">الحساب</strong><small id="header-role">قطرة</small></span><span>⌄</span></button></div>
       </header>
-      <section id="page-content" class="page-content"></section>
+      <section id="page-content" class="page-content" aria-busy="true"><div class="empty" role="status"><h3>جاري تحميل البيانات…</h3></div></section>
     </main>
     <div id="sidebar-overlay" class="overlay"></div>
   </div>

@@ -238,6 +238,8 @@ document.querySelectorAll('[data-verify]').forEach(button => {
         isPrimary: true,
         institutionProfile: profileToSave,
         approvalStatus: 'pending',
+        requestedServices: {hospital:['blood_request'],hospital_bloodbank:['blood_request','blood_bank'],bloodbank:['blood_bank']}[role],
+        approvedServices: [],
         rejectionCount: 0,
         rejectionReason: '',
         submittedAt: new Date().toISOString()
